@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import { Navbar } from '../components/Navbar/Navbar'
+import React, { useEffect, useState } from 'react';
 
 const Home = () => {
   const [productList, setProductList] = useState([]);
@@ -16,16 +15,14 @@ const Home = () => {
 
   return (
     <div>
-      <Navbar />
       <div>
         {productList.map(product => (
-          <>
+          <div key={product.id}>
             <h3>{product.name}</h3>
             <div>
               <img src={product.image} alt={product.name} />
             </div>
-          </>
-
+          </div>
         )
         )}
       </div>
